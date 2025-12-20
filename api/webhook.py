@@ -5,7 +5,7 @@ app = FastAPI()
 
 @app.post("/github/webhook")
 async def github_webhook(req: Request):
-    payload = await req.json()
+    payload = await req.json() 
 
     if payload["workflow_run"]["conclusion"] == "failure":
         logs = "Mock CI logs for now"
