@@ -1,9 +1,26 @@
 def extract_error(logs: str) -> str:
+    """
+    Extracts the most relevant error lines from CI logs
+    """
     lines = logs.splitlines()
-    error_lines = []
+
+    error_keywords = [
+        "ModuleNotFoundError",
+        "ImportError",
+        "Traceback",
+        "ERROR",
+        "Error:",
+        "FAILED",
+        "Exception"
+    ]
+
+    extracted = []
 
     for line in lines:
-        if "ERROR" in line or "ModuleNotFoundError" in line or "Traceback" in line:
-            error_lines.append(line)
+        for key in error_keywords:
+            if key in line:
+                extracted.append(line.strip())
+                break
 
-    return "\n".join(error_lines[-20:])
+    # Limit size for LLM
+    return "\n".join(extracted[-20:])

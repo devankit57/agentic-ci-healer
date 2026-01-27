@@ -1,12 +1,7 @@
-def apply_fix(fix: dict):
-    file = fix["file"]
-    action = fix["action"]
-    content = fix["content"]
+from utils.github_client import create_fix_pr
 
-    if action == "add":
-        with open(file, "a") as f:
-            f.write("\n" + content)
-
-    elif action == "replace":
-        with open(file, "w") as f:
-            f.write(content)
+def apply_fix(fix):
+    return create_fix_pr(
+        fix["file"],
+        fix["content"]
+    )
