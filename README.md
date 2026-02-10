@@ -27,28 +27,7 @@ An agentic, AI-driven system that automatically diagnoses CI/CD failures from re
 
 ---
 
-## 🎯 Problem Statement
 
-Modern CI/CD pipelines often fail due to:
-
-- ❌ Missing dependencies
-- ⚙️ Misconfigured environments
-- 🐛 Simple code or config errors
-- 🔁 Repeated, well-known failure patterns
-
-**Engineers repeatedly fix the same class of issues manually.**
-
-### Our Goal
-
-Design an autonomous system that:
-
-✅ Observes pipeline failures  
-✅ Diagnoses root causes from real logs  
-✅ Applies safe, targeted fixes  
-✅ Integrates directly with GitHub workflows  
-✅ Keeps humans in the loop via pull requests
-
----
 
 ## 🏗️ System Architecture
 
