@@ -268,13 +268,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📧 Contact
 
-For questions or feedback, please open an issue or reach out to the maintainers.
+For questions or feedback, please open an issue or reach out to the maintainer.
 
 ---
 
 <div align="center">
 
-**Made with ❤️ by the DevOps Automation Community**
+
 
 ⭐ Star this repo if you find it helpful!
 
